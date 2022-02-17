@@ -1,0 +1,34 @@
+.ant-btn-dangerous:focus{
+     background: rgb(247, 56, 72)!important;
+     color: white!important;
+}
+
+.add-chip:focus{
+    background: green!important;
+    color: white!important;
+
+}
+.delete-row-button:focus{
+    background: rgb(255, 37, 37)!important;
+    color: white!important;
+
+}
+.ant-dropdown-trigger:focus{
+    background: rgb(32, 107, 247)!important;
+    color: white!important;
+
+}
+.ant-btn-custom:focus{
+    background: rgb(32, 107, 247)!important;
+    color: white!important;
+
+}
+.select-file-body:focus{
+    background: rgb(243, 247, 231)!important;
+
+}
+.ant-btn-primary:focus{
+    background: rgb(199, 219, 255)!important;
+    color: rgb(0, 43, 235)!important;
+
+}

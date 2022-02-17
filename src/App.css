@@ -1,0 +1,68 @@
+@import '~antd/dist/antd.css';
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.focus-style-text:focus{
+ /* background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
+
+ color: white; */
+  /* box-shadow: 0 3px 5px 2px rgba(255, 105, 135, .3); */
+-webkit-text-stroke: 1px blue;
+/* color: #00FF00; */
+border-style: solid;
+font-family: sans; color: white;
+}
+.focus-style-div:focus{
+border-style: 2px solid rgb(24 144 255)
+}
+.anchor-focus-style:focus {
+  background: rgb(123, 174, 255)!important;
+  color:red;
+  
+}
+.user-name:focus{
+    background: rgb(32, 107, 247)!important;
+    color: white!important;
+
+}
+.ant-dropdown-menu-item-active{
+   background: rgb(123, 174, 255)!important;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
