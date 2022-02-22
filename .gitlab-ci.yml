@@ -1,4 +1,4 @@
-image : node:latest # editable node version to match one's own node version for deployment
+image : node:14.18.1 # editable node version to match one's own node version for deployment
 
 stages :
   - build
