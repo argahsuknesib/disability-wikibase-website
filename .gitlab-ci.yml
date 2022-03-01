@@ -18,7 +18,7 @@ build-pages:
     - rm -rf build
     - CI=false npm install
     - CI=false npm run build
-    - CI=npm install -g serve
+    - CI=false npm install -g serve
     - rm -rf public
     - cp build/index.html build/404.html
     - mv build public
