@@ -1,39 +1,35 @@
 image : node:14.18.1 # editable node version to match one's own node version for deployment
 
-stages :
+stages: 
   - build
+  - test
   - deploy
 
-services:
-  - mysql:latest
-
-cache :
-  paths :
-    - node_modules/
-
-build-pages:
-  stage : build
-  script :
-    - npm config set proxy "http://cache.univ-st-etienne.fr:3128"
-    - rm -rf build
-    - CI=false npm install
-    - CI=false npm run build
-    - CI=false npm install -g serve
-    - rm -rf public
-    - cp build/index.html build/404.html
-    - mv build public
-    - serve -s build
+build:
+  stage: build
+  image: node:14.18.1
+  script:
+    - echo "building the app"
+    - npm install
+    - npm build
+    - echo "app has been built successfully"
   artifacts:
+    expire_in: 1 hour
     paths:
-      - public
+      - build
+      - node_modules/
 
+test:
+  stage:  test
+  image: node:14.18.1
+  script:
+    - echo "Testing App"
+    - CI=true npm test
+    - echo "the test has been successful"
 
-pages:
+deploy:
   stage: deploy
   script:
-    - ls
-  artifacts:
-    paths:
-      - public
-
-      
+    - echo "deploying the app"
+    - npm install -g serve
+    - serve -s build
