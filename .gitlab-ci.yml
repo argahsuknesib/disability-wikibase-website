@@ -10,8 +10,8 @@ build:
   image: node:14.18.1
   script:
     - echo "building the app"
-    - npm install
-    - npm build
+    - CI=false npm install
+    - CI=false npm build
     - echo "app has been built successfully"
   artifacts:
     expire_in: 1 hour
@@ -31,5 +31,5 @@ deploy:
   stage: deploy
   script:
     - echo "deploying the app"
-    - npm install -g serve
-    - serve -s build
+    - CI=false npm install -g serve
+    - CI=false serve -s build
