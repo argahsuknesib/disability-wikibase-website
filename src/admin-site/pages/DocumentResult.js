@@ -110,7 +110,7 @@ const DocumentResult = () => {
             render: (_, record) =>
                 tableData.length >= 0 ? (
                     <Popover getPopupContainer={triggerNode => triggerNode.parentNode} className="focus-style-div" trigger="[click]" key={record.id + "delete_row_action"} content={popOverContent(record)} title="Confirm delete?" >
-                        <Button aria-label="delete row" danger>Delete row</Button>
+                        <Button aria-label="delete paragraph" danger>Delete Paragraph</Button>
                     </Popover >
                 ) : null,
         },
@@ -420,7 +420,7 @@ const DocumentResult = () => {
                 </Col>
                 <Col xl={2} xs={24}>
                     <Button type="primary" disabled={tableData.length < 1} aria-label="upload results to wikibase" onClick={handleUploadEdit} shape="round" icon={<CloudUploadOutlined />} size={'default'}>
-                        Uploads to Wikibase
+                        Request to Upload
                     </Button>
                 </Col>
             </Row>
