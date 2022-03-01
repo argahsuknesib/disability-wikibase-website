@@ -14,7 +14,6 @@ build:
     - CI=false npm run build
     - echo "app has been built successfully"
   artifacts:
-    expire_in: 1 hour
     paths:
       - build
       - node_modules/
